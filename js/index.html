@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript hari ke-4</title>
+</head>
+
+<body>
+    <p id="root"></p>
+    <script>
+
+        // const umur = "Dinda";
+        let alamat = "Jl. Medan Perjuangan";
+        alamat = "Jl. Surabaya";
+        var nilai = 90;
+        nilai = 98;
+
+        console.log("Nilai: ", nilai);
+        // alert("Nilai: " + nilai);
+        document.getElementById("root").innerHTML = "Nilai: " + nilai;
+
+        const value1 = 100; // number
+        const value2 = "100"; // string
+        console.log(typeof value2);
+        console.log("Hasil: ", value1 + value2);
+
+        // const nilaiSiswa = [80, 87, 85];
+        const nilaiSiswa = 90;
+
+        // const n = nilaiSiswa.map(data => data)
+        // console.log(n);
+
+        const hargaTas1 = 5443000;
+        const hargaTas2 = 10178100;
+        const hargaBaju = 239970;
+        const diskon = 200000;
+        const totalBayar = (hargaTas1 + hargaTas2 + hargaBaju) - diskon;
+        console.log("Total Bayar: ", totalBayar);
+
+        const currentPassword = "12345!";
+        const incomingPassword = "12345";
+        // console.log("Password: ", currentPassword == incomingPassword);
+        // console.log("Apakah identical: ", currentPassword === incomingPassword);
+        // console.log("Apakah nilainya tidak sama?: ", currentPassword != incomingPassword);
+        console.log("Apakah not identical?: ", currentPassword !== incomingPassword);
+
+        const noHp = "082966661111";
+        console.log(noHp.slice(1, 12));
+
+        let umur = 40;
+
+        if (umur == 40) {
+            console.log("Umur sudah 40 tahun");
+        } else if (umur >= 17) {
+            console.log("Umur sudah 17 tahun keatas");
+        } else {
+            console.log("Umur belum 17 tahun");
+        }
+
+        let day = 6;
+        switch (day) {
+            case 1:
+                console.log("Hari ini adalah hari Senin");
+                break;
+            case 2:
+                console.log("Hari ini adalah hari Selasa");
+                break;
+            case 3:
+                console.log("Hari ini adalah hari Rabu");
+                break;
+            case 4:
+                console.log("Hari ini adalah hari Kamis");
+                break;
+            default:
+                console.log("Hari ini adalah weekend");
+                break;
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            console.log("Number: ", i);
+        }
+
+        const colors = ["Red", "Yellow", "Purple", "White"];
+
+        for (var i in colors) {
+            console.log("Color: ", colors[i]);
+        }
+
+        function bayar(harga, discount, ongkir) {
+            let result = harga - (harga * discount) + ongkir;
+
+            return result;
+        }
+
+        console.log(bayar(200000, 0.10, 12000));
+        console.log("harga sepatu: ", bayar(340000, 0.25, 10000));
+
+    </script>
+</body>
+
+</html>
